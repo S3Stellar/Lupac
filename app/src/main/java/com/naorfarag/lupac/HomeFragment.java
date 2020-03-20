@@ -47,6 +47,18 @@ public class HomeFragment extends Fragment {
         return rootView;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        videoview.start();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        videoview.pause();
+    }
+
     private void setAddAlarmListener(FloatingActionButton newAlarmBtn) {
         newAlarmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
