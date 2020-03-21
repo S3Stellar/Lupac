@@ -21,6 +21,12 @@ public class NewAlarmActivity extends AppCompatActivity {
         setClickListeners();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_in_down, R.anim.slide_out_down);
+    }
+
     private void setClickListeners() {
 
         randomBtn.setOnClickListener(new View.OnClickListener() {
